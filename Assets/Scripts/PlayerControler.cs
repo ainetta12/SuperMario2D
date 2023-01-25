@@ -13,6 +13,8 @@ public class PlayerControler : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rBody;
     private GroundSensor sensor;
+    private Animator anim;
+
     float horizontal;
     
 
@@ -22,6 +24,7 @@ public class PlayerControler : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rBody = GetComponent<Rigidbody2D>();
         sensor = GameObject.Find ("GroundSensor").GetComponent<GroundSensor>();
+        anim = GetComponent<Animator>();
 
         playerHealth = 10;
         Debug.Log(texto);
@@ -37,10 +40,17 @@ public class PlayerControler : MonoBehaviour
         if(horizontal < 0)
         {
             spriteRenderer.flipX = true; 
+            anim.SetBool("IsRunning", true);
         }
+
         else if(horizontal > 0)
         {
              spriteRenderer.flipX = false;
+             anim.SetBool("IsRunning", true);
+        }
+        else
+        {
+             anim.SetBool("IsRunning", false);
         }
 
         if(Input.GetButtonDown("Jump") && sensor.isGrounded)
