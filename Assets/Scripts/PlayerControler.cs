@@ -13,7 +13,7 @@ public class PlayerControler : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rBody;
     private GroundSensor sensor;
-    private Animator anim;
+    public Animator anim;
 
     float horizontal;
     
@@ -32,10 +32,11 @@ public class PlayerControler : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    
     {
         horizontal = Input.GetAxis("Horizontal");
 
-        transform.position += new Vector3(horizontal, 0, 0) * playerSpeed * Time.deltaTime;
+        //transform.position += new Vector3(horizontal, 0, 0) * playerSpeed * Time.deltaTime;
 
         if(horizontal < 0)
         {
@@ -56,6 +57,15 @@ public class PlayerControler : MonoBehaviour
         if(Input.GetButtonDown("Jump") && sensor.isGrounded)
         {
             rBody.AddForce(Vector2.up * jumForce, ForceMode2D.Impulse);
+            anim.SetBool("IsJumping", true);
         }
     }
+
+
+    void FixedUpdate() 
+    {
+        rBody.velocity = new Vector2 (horizontal * playerSpeed, rBody.velocity.y);
+    }
+    
+
 }

@@ -10,24 +10,47 @@ public class GroundSensor : MonoBehaviour
 
     void Awake()
     {
-        controller = GetComponentInParent<PlayerController>();
+        controler = GetComponentInParent<PlayerControler>();
     }
 
    void OnTriggerEnter2D(Collider2D other)
    {
-    isGrounded = true;
-    controller.anim.SetBool("InJumping", false);
+        if(other.gameObject.layer == 3)
+        {
+            isGrounded = true;
+            controler.anim.SetBool("IsJumping", false);
+        }
+
+        else if(other.gameObject.layer == 6)
+        {
+            Debug.Log("Goomba muerto");
+            Destroy(other.gameObject);
+        }
+
+        if(other.gameObject.tag == "DeadZone")
+        {
+            Debug.Log("estoy muerto");
+        }
    }
 
     void OnTriggerStay2D(Collider2D other)
    {
-    isGrounded = true;
-    controller.anim.SetBool("InJumping", false);
+        if(other.gameObject.layer == 3)
+        {
+            isGrounded = true;
+            controler.anim.SetBool("IsJumping", false);
+        }
+
    }
 
    void OnTriggerExit2D(Collider2D other)
     {
-        isGrounded = false;
+        if(other.gameObject.layer == 3)
+        {
+            isGrounded = false;
+            controler.anim.SetBool("IsJumping", true);
+        }
+       
     }
    
 }
