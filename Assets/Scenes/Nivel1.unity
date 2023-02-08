@@ -3687,7 +3687,7 @@ Transform:
   - {fileID: 1216482760}
   - {fileID: 489265069}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159408624
 GameObject:
@@ -7856,9 +7856,9 @@ GameObject:
   m_Component:
   - component: {fileID: 280820272}
   - component: {fileID: 280820273}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_1
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9174,9 +9174,9 @@ GameObject:
   - component: {fileID: 331882148}
   - component: {fileID: 331882150}
   - component: {fileID: 331882149}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_0
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10011,9 +10011,9 @@ GameObject:
   - component: {fileID: 368489179}
   - component: {fileID: 368489181}
   - component: {fileID: 368489180}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_0
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11607,9 +11607,9 @@ GameObject:
   m_Component:
   - component: {fileID: 405796897}
   - component: {fileID: 405796898}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_1
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12980,9 +12980,9 @@ GameObject:
   m_Component:
   - component: {fileID: 457799478}
   - component: {fileID: 457799479}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberia4
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15275,9 +15275,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 523768307}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17802,9 +17802,9 @@ GameObject:
   m_Component:
   - component: {fileID: 614739320}
   - component: {fileID: 614739321}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_1
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18318,6 +18318,174 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1.0625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &661219683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661219684}
+  - component: {fileID: 661219689}
+  - component: {fileID: 661219688}
+  - component: {fileID: 661219687}
+  - component: {fileID: 661219686}
+  - component: {fileID: 661219685}
+  m_Layer: 6
+  m_Name: Goombas_0 (1)
+  m_TagString: ColllisionGoomba
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661219684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661219683}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.36, y: 0.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 772021593}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &661219685
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661219683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 838949727c6af914ba441a0e85a53321, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &661219686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661219683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07be6638841dd18458dfbb3e3231eaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+--- !u!50 &661219687
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661219683}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &661219688
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661219683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &661219689
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661219683}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -621067906, guid: f40b110cae93a5e4b9580dda3e10e371, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -21825,6 +21993,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2072995923}
+  - {fileID: 661219684}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22488,7 +22657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 816563585}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23784,9 +23953,9 @@ GameObject:
   - component: {fileID: 856169083}
   - component: {fileID: 856169085}
   - component: {fileID: 856169084}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_0 (1)
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26941,9 +27110,9 @@ GameObject:
   m_Component:
   - component: {fileID: 975551955}
   - component: {fileID: 975551956}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberia3
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32149,9 +32318,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1127031755}
   - component: {fileID: 1127031756}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_1 (1)
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32933,9 +33102,9 @@ GameObject:
   - component: {fileID: 1142095190}
   - component: {fileID: 1142095192}
   - component: {fileID: 1142095191}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_0
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33044,9 +33213,9 @@ GameObject:
   - component: {fileID: 1143036355}
   - component: {fileID: 1143036357}
   - component: {fileID: 1143036356}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_0
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41739,9 +41908,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1406013908}
   - component: {fileID: 1406013909}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberia2
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47691,9 +47860,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1621558142}
   - component: {fileID: 1621558143}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_1 (1)
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51655,9 +51824,9 @@ GameObject:
   - component: {fileID: 1787141993}
   - component: {fileID: 1787141995}
   - component: {fileID: 1787141994}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Tuberias_0
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53984,7 +54153,7 @@ Transform:
   - {fileID: 735749428}
   - {fileID: 1658583566}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1872316838
 GameObject:
@@ -58942,9 +59111,10 @@ GameObject:
   - component: {fileID: 2072995925}
   - component: {fileID: 2072995924}
   - component: {fileID: 2072995927}
+  - component: {fileID: 2072995928}
   m_Layer: 6
   m_Name: Goombas_0
-  m_TagString: Untagged
+  m_TagString: ColllisionGoomba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58957,7 +59127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072995922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.233078, y: -0.5127802, z: 0}
+  m_LocalPosition: {x: 37.07, y: 0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59075,6 +59245,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07be6638841dd18458dfbb3e3231eaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+--- !u!95 &2072995928
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072995922}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 838949727c6af914ba441a0e85a53321, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2073647220
 GameObject:
   m_ObjectHideFlags: 0
