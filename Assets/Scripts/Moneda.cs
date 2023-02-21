@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Moneda : MonoBehaviour
 {
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
