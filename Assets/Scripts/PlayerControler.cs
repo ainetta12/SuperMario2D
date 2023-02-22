@@ -13,9 +13,11 @@ public class PlayerControler : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rBody;
     private GroundSensor sensor;
+    private Moneda moneda;
     public Animator anim;
 
     float horizontal;
+   
     
 
     // Start is called before the first frame update
@@ -24,6 +26,7 @@ public class PlayerControler : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rBody = GetComponent<Rigidbody2D>();
         sensor = GameObject.Find ("GroundSensor").GetComponent<GroundSensor>();
+        moneda = GameObject.Find("Moneda").GetComponent<Moneda>();
         anim = GetComponent<Animator>();
 
         playerHealth = 10;
@@ -66,6 +69,17 @@ public class PlayerControler : MonoBehaviour
     {
         rBody.velocity = new Vector2 (horizontal * playerSpeed, rBody.velocity.y);
     }
-    
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "CollisionMoneda")
+        {
+            Debug.Log("Mario muerto");
+            Destroy(collision.gameObject);
+            Moneda moneda = collision.gameObject.GetComponent<Moneda>();
+            moneda.Die();
+        
+        }
+    }
 
 }
