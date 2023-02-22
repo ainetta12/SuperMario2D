@@ -14,6 +14,7 @@ public class PlayerControler : MonoBehaviour
     private Rigidbody2D rBody;
     private GroundSensor sensor;
     private Moneda moneda;
+    private Flag flag;
     public Animator anim;
 
     float horizontal;
@@ -25,9 +26,9 @@ public class PlayerControler : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rBody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         sensor = GameObject.Find ("GroundSensor").GetComponent<GroundSensor>();
         moneda = GameObject.Find("Moneda").GetComponent<Moneda>();
-        anim = GetComponent<Animator>();
 
         playerHealth = 10;
         Debug.Log(texto);
@@ -79,6 +80,12 @@ public class PlayerControler : MonoBehaviour
             Moneda moneda = collision.gameObject.GetComponent<Moneda>();
             moneda.Die();
         
+        }
+
+        if (collision.gameObject.tag == "CollisionMoneda")
+        {
+            Debug.Log("Mario muerto");
+            Flag flag = collision.gameObject.GetComponent<Flag>();
         }
     }
 

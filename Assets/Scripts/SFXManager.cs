@@ -7,6 +7,7 @@ public class SFXManager : MonoBehaviour
    public AudioClip goombaDeath;
    public AudioClip marioDeath;
    public AudioClip cogerMoneda;
+   public AudioClip flag;
 
     private AudioSource source;
     // Start is called before the first frame update
@@ -30,8 +31,8 @@ public class SFXManager : MonoBehaviour
         source.PlayOneShot(cogerMoneda);
     }
 
-    public void Bandera()
+    public void Flag()
     {
-        source.PlayOneShot(bandera);
+        source.PlayOneShot(flag);
     }
 }
