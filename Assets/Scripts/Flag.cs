@@ -24,7 +24,6 @@ public class Flag : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             boxCollider.enabled = false;
-            Debug.Log("Mario muerto");
             sfxManager.Flag();
             soundManager.StopBGM();
         }
