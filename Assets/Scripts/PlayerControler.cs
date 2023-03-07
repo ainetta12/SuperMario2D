@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControler : MonoBehaviour
 {
     int playerHealth = 3;
     public float playerSpeed = 5.5f;
     public float jumForce = 3f;
+    int contadorCoin;
+    public Text contadorTexto;
 
     string texto = "Hello World";
 
@@ -28,10 +31,12 @@ public class PlayerControler : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sensor = GameObject.Find ("GroundSensor").GetComponent<GroundSensor>();
-        moneda = GameObject.Find("Moneda").GetComponent<Moneda>();
+        moneda = GameObject.Find ("Moneda").GetComponent<Moneda>();
 
         playerHealth = 10;
         Debug.Log(texto);
+
+        contadorCoin = 0;
     }
 
     // Update is called once per frame
@@ -79,10 +84,13 @@ public class PlayerControler : MonoBehaviour
             Destroy(collision.gameObject);
             Moneda moneda = collision.gameObject.GetComponent<Moneda>();
             moneda.Die();
-        
+            contadorCoin++;
+            contadorTexto.text = "coin " + contadorCoin;
+            Debug.Log(contadorCoin);
+
         }
 
-        if (collision.gameObject.tag == "CollisionMoneda")
+        if (collision.gameObject.tag == "CollisionFlag")
         {
             Debug.Log("Mario muerto");
             Flag flag = collision.gameObject.GetComponent<Flag>();
