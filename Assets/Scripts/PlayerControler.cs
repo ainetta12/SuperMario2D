@@ -31,7 +31,7 @@ public class PlayerControler : MonoBehaviour
         rBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sensor = GameObject.Find ("GroundSensor").GetComponent<GroundSensor>();
-        moneda = GameObject.Find ("Moneda").GetComponent<Moneda>();
+        //moneda = GameObject.Find ("Moneda").GetComponent<Moneda>();
 
         playerHealth = 10;
         Debug.Log(texto);
@@ -85,7 +85,7 @@ public class PlayerControler : MonoBehaviour
             Moneda moneda = collision.gameObject.GetComponent<Moneda>();
             moneda.Die();
             contadorCoin++;
-            contadorTexto.text = "coin " + contadorCoin;
+            contadorTexto.text = "coin " + contadorCoin.ToString();
             Debug.Log(contadorCoin);
 
         }
