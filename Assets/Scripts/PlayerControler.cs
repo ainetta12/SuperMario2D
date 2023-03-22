@@ -22,7 +22,8 @@ public class PlayerControler : MonoBehaviour
 
     float horizontal;
    
-    
+    GameManager gameManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,9 @@ public class PlayerControler : MonoBehaviour
         sensor = GameObject.Find ("GroundSensor").GetComponent<GroundSensor>();
         //moneda = GameObject.Find ("Moneda").GetComponent<Moneda>();
 
+        //Busscamos el objeto GameManager y lo asignamos asignamos a la variable del GameManager
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+      
         playerHealth = 10;
         Debug.Log(texto);
 
@@ -43,7 +47,9 @@ public class PlayerControler : MonoBehaviour
     void Update()
     
     {
-        horizontal = Input.GetAxis("Horizontal");
+        if(gameManager.isGameOver == false)
+        {
+              horizontal = Input.GetAxis("Horizontal");
 
         //transform.position += new Vector3(horizontal, 0, 0) * playerSpeed * Time.deltaTime;
 
@@ -68,6 +74,8 @@ public class PlayerControler : MonoBehaviour
             rBody.AddForce(Vector2.up * jumForce, ForceMode2D.Impulse);
             anim.SetBool("IsJumping", true);
         }
+        }
+        
     }
 
 
@@ -96,5 +104,13 @@ public class PlayerControler : MonoBehaviour
             Flag flag = collision.gameObject.GetComponent<Flag>();
         }
     }
-
+    
+    void OnTriggerEnter2D(Collision2D collider)
+    {
+        if (collider.gameObject.tag == "Colin")
+        {
+           gameManager.AddCoin();
+           Destroy(collider.gameObject);
+        }
+    }
 }
