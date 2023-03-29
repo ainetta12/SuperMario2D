@@ -9,9 +9,18 @@ public class GameManager : MonoBehaviour
     public bool isGameOver;
     // Start is called before the first frame update
 
+    public bool canShoot;
+    public float powerUpDuration = 5;
+    public float powerUpTimer = 0;
+
     public Text coinText;
 
     int coins;
+
+    void Update()
+    {
+        ShootPowerUp();
+    }
 
     public void GameOver()
     {
@@ -45,5 +54,22 @@ public class GameManager : MonoBehaviour
     {
         coins++;
         coinText.text = coins.ToString();
+    }
+
+    void ShootPowerUp()
+    {
+        if(canShoot)
+        {
+            if(powerUpTimer <= powerUpDuration)
+            {
+                powerUpTimer += Time.deltaTime;
+            }
+            else
+            {
+                canShoot = false;
+                powerUpTimer = 0;
+            }
+        }
+
     }
 }

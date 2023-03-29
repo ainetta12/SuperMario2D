@@ -24,6 +24,9 @@ public class PlayerControler : MonoBehaviour
    
     GameManager gameManager;
 
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +58,15 @@ public class PlayerControler : MonoBehaviour
 
         if(horizontal < 0)
         {
-            spriteRenderer.flipX = true; 
+            //spriteRenderer.flipX = true; 
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             anim.SetBool("IsRunning", true);
         }
 
         else if(horizontal > 0)
         {
-             spriteRenderer.flipX = false;
+             //spriteRenderer.flipX = false;
+             transform.rotation = Quaternion.Euler(0, 0, 0);
              anim.SetBool("IsRunning", true);
         }
         else
@@ -74,7 +79,12 @@ public class PlayerControler : MonoBehaviour
             rBody.AddForce(Vector2.up * jumForce, ForceMode2D.Impulse);
             anim.SetBool("IsJumping", true);
         }
+        if(Input.GetKeyDown(KeyCode.F) && gameManager.canShoot)
+        {
+            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         }
+        }
+
         
     }
 
@@ -105,11 +115,17 @@ public class PlayerControler : MonoBehaviour
         }
     }
     
-    void OnTriggerEnter2D(Collision2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Colin")
         {
            gameManager.AddCoin();
+           Destroy(collider.gameObject);
+        }
+
+         if (collider.gameObject.tag == "PowerUp")
+        {
+           gameManager.canShoot = true;
            Destroy(collider.gameObject);
         }
     }
