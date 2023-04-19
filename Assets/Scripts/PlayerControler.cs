@@ -27,6 +27,10 @@ public class PlayerControler : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
+    public Transform attackHitBox;
+    public float attackRange;
+    public LayerMask enemyLayer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +57,7 @@ public class PlayerControler : MonoBehaviour
         if(gameManager.isGameOver == false)
         {
               horizontal = Input.GetAxis("Horizontal");
-
+        }
         //transform.position += new Vector3(horizontal, 0, 0) * playerSpeed * Time.deltaTime;
 
         if(horizontal < 0)
@@ -83,7 +87,12 @@ public class PlayerControler : MonoBehaviour
         {
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         }
+        
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            Attack();
         }
+
 
         
     }
@@ -92,6 +101,16 @@ public class PlayerControler : MonoBehaviour
     void FixedUpdate() 
     {
         rBody.velocity = new Vector2 (horizontal * playerSpeed, rBody.velocity.y);
+    }
+
+    void Attack ()
+    {
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackHitBox.position, attackRange, enemyLayer);
+
+        for (int i = 0; i < enemiesInRange.Length; i++)
+        {
+            Destroy(enemiesInRange[i].gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -128,5 +147,10 @@ public class PlayerControler : MonoBehaviour
            gameManager.canShoot = true;
            Destroy(collider.gameObject);
         }
+    }
+
+    void OnDrawGizmos() 
+    {
+        Gizmos.DrawWireSphere(attackHitBox.position, attackRange);
     }
 }
